@@ -1,29 +1,29 @@
-# MinersBuddy Backend API â›ï¸
+# MinersBuddy Backend API ⛏️
 
 FastAPI backend for MinersBuddy Mining Exam Prep App.
 
 ## Tech Stack
-- **FastAPI** â€” Python web framework
-- **MongoDB Atlas** â€” MCQ Questions storage
-- **Supabase** â€” Users, Courses, Progress storage
-- **Railway** â€” Deployment
+- **FastAPI** — Python web framework
+- **MongoDB Atlas** — MCQ Questions storage
+- **Supabase** — Users, Courses, Progress storage
+- **Railway** — Deployment
 
 ## Project Structure
 ```
 app/
-â”œâ”€â”€ main.py              # FastAPI app entry point
-â”œâ”€â”€ core/
-â”‚   â””â”€â”€ config.py        # Environment settings
-â”œâ”€â”€ db/
-â”‚   â”œâ”€â”€ mongodb.py       # MongoDB connection
-â”‚   â””â”€â”€ supabase.py      # Supabase connection
-â””â”€â”€ routes/
-    â”œâ”€â”€ questions.py     # MCQ Questions (MongoDB)
-    â”œâ”€â”€ users.py         # User profiles (Supabase)
-    â”œâ”€â”€ courses.py       # Courses/Subjects/Chapters
-    â”œâ”€â”€ topics.py        # Topics
-    â”œâ”€â”€ progress.py      # Quiz results + Weakness tracking
-    â””â”€â”€ announcements.py # Announcements
+├── main.py              # FastAPI app entry point
+├── core/
+│   └── config.py        # Environment settings
+├── db/
+│   ├── mongodb.py       # MongoDB connection
+│   └── supabase.py      # Supabase connection
+└── routes/
+    ├── questions.py     # MCQ Questions (MongoDB)
+    ├── users.py         # User profiles (Supabase)
+    ├── courses.py       # Courses/Subjects/Chapters
+    ├── topics.py        # Topics
+    ├── progress.py      # Quiz results + Weakness tracking
+    └── announcements.py # Announcements
 ```
 
 ## API Endpoints
@@ -96,14 +96,14 @@ API docs: http://localhost:8000/docs
    - MONGODB_DB_NAME
    - SUPABASE_URL
    - SUPABASE_KEY
-5. Deploy! ðŸš€
+5. Deploy! 🚀
 
 ## Weakness Score Logic
 
 ```
 weakness_score = 1 - (correct / total)
 
-0.0 - 0.3 = Strong  ðŸ’š
-0.3 - 0.6 = Average ðŸŸ¡
-0.6 - 1.0 = Weak    ðŸ”´
+0.0 - 0.3 = Strong  💚
+0.3 - 0.6 = Average 🟡
+0.6 - 1.0 = Weak    🔴
 ```
