@@ -1,4 +1,4 @@
-# mb-backendfrom fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import Optional
 from app.db.supabase import get_supabase
